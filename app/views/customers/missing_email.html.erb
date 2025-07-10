@@ -1,0 +1,10 @@
+<h1>Customers#missing_email</h1>
+<p>Find me in app/views/customers/missing_email.html.erb</p>
+<h1>Customers Without Email</h1>
+<%= link_to "All Customers", root_path %> |
+<%= link_to "Alphabetized", customers_alphabetized_path %>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>
+

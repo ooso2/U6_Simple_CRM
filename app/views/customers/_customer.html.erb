@@ -1,0 +1,17 @@
+<div class="box customer">
+  <div class="media">
+    <div class="media-left">
+      <% if customer.image.attached? %>
+        <%= image_tag customer.image.variant(resize_to_limit: [100, 100]) %>
+      <% else %>
+        <%= image_tag "default-avatar.png", size: "100x100" %>
+      <% end %>
+    </div>
+    <div class="media-content">
+      <p><strong>Name:</strong> <%= customer.full_name %></p>
+      <p><strong>Phone:</strong> <%= customer.phone_number %></p>
+      <p><strong>Email:</strong> <%= customer.email.presence || "Not provided" %></p>
+      <p><strong>Notes:</strong> <%= customer.notes %></p>
+    </div>
+  </div>
+</div>
