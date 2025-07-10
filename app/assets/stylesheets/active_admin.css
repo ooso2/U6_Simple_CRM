@@ -1,0 +1,25 @@
+/*= require active_admin/base */
+/*= require active_admin/base */
+
+/* Custom ActiveAdmin styles can go below */
+
+/* Example: Change the background color of the header */
+.active_admin .header {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* Example: Style the sidebar */
+.active_admin .sidebar_section {
+  background: #f8f8f8;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Example: Style table headers */
+.active_admin table.index_table th {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Add more custom styles as needed */
