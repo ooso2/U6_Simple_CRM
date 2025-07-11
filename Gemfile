@@ -69,3 +69,6 @@ gem 'activeadmin'
 gem 'image_processing', '~> 1.2' # required for ActiveStorage
 
 gem 'devise'
+
+gem 'mini_magick'
+

@@ -1,17 +1,16 @@
-<div class="box customer">
+<div class="customer">
   <div class="media">
     <div class="media-left">
-      <% if customer.image.attached? %>
-        <%= image_tag customer.image.variant(resize_to_limit: [100, 100]) %>
-      <% else %>
-        <%= image_tag "default-avatar.png", size: "100x100" %>
-      <% end %>
+      <%= image_tag(customer.image_or_default, alt: customer.full_name, size: "100x100") %>
     </div>
-    <div class="media-content">
+    <div class="media-body">
       <p><strong>Name:</strong> <%= customer.full_name %></p>
       <p><strong>Phone:</strong> <%= customer.phone_number %></p>
-      <p><strong>Email:</strong> <%= customer.email.presence || "Not provided" %></p>
-      <p><strong>Notes:</strong> <%= customer.notes %></p>
+      <p><strong>Email:</strong> <%= customer.email.presence || "N/A" %></p>
+
+      <%= link_to "View", customer_path(customer) %>
+      <%= link_to "Edit", edit_customer_path(customer) %>
+      <%= link_to "Delete", customer_path(customer), method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
   </div>
 </div>
